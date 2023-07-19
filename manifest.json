@@ -1,0 +1,23 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"uuid": "4605022a-b7df-4452-8377-c86d8707b087",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 20, 0]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "f56880ee-d8ea-45d0-a56e-ecf931690aae",
+			"version": [1, 0, 0]
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Miniontoby",
+			"Scommander (Original Java Datapack)"
+		]
+	}
+}

@@ -29,6 +29,22 @@
 			"minecraft:collision_box": {
 				"width": 0.0001,
 				"height": 0.0001
+			},
+			"minecraft:on_death": {
+				"event": "item_tubes:despawn",
+				"target": "self"
+			}
+		},
+		"component_groups": {
+			"item_tubes:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"events": {
+			"item_tubes:despawn": {
+				"add": {
+					"component_groups": [ "item_tubes:despawn" ]
+				}
 			}
 		}
 	}

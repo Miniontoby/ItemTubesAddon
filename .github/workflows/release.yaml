@@ -1,0 +1,23 @@
+name: Create mcaddon and release
+on:
+  push:
+    tags: ["v*.*.*"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Make mcaddon
+      uses: thedoctor0/zip-release@0.7.1
+      with:
+        type: 'zip'
+        filename: 'ItemTubesAddon.mcaddon'
+        exclusions: '*.git*'
+    # this doesn't work!
+    - name: Upload Release
+      uses: ncipollo/release-action@v1.12.0
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        artifacts: "ItemTubesAddon.mcaddon"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        allowUpdates: true
